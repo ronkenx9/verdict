@@ -1,0 +1,82 @@
+{
+  "network": "xlayer_testnet",
+  "generatedAt": "2026-04-12T13:10:00.000Z",
+  "contracts": {
+    "verdictCore": "0x8d149c622cf56f2663b5368Bc1382c9C711972a8",
+    "verdictScore": "0x70E7Af46711aAB0F8bdb8fe98D9D48F8030CAedf",
+    "taskMarket": "0x73d311B3aA256f490c2a6AF77D970fabe7c09acd",
+    "settlementToken": "0xD650E687412e548C2aa7718581d7541876aD72E0"
+  },
+  "agents": {
+    "poster": "0x1c463e0574175e5A447AC1E6F1C3e3455E0f2199",
+    "goodbot": "0x70eD3f2AC5F066c8e80Faa1C7582967573f914d2",
+    "badbot": "0xDf10F03B67a0Db3040ca411DBf74839212164819",
+    "resolver": "0xc81F5671164cd37Bd142277Fa1409c96a3116bBD"
+  },
+  "transactions": [
+    {
+      "step": "fund_poster",
+      "txHash": "0x0910f25ca1c38b89a90ee188b7485cac7908f43dba5a0d8d7cf0df6c128ce888"
+    },
+    {
+      "step": "fund_goodbot",
+      "txHash": "0xeb868ebff6478023fc3e46b40cb5cebbf0c537683ff292dea63eb238e07517ef"
+    },
+    {
+      "step": "fund_badbot",
+      "txHash": "0xbc9db20873e8e8744c668a88a175d8a1c2a12e4fee3199416453109be06fa86f"
+    },
+    {
+      "step": "fund_resolver",
+      "txHash": "0xdf9a034a73631bdf7a03c74f844a85aac77760cbd8dc68fb18364aafc7e5dd08"
+    },
+    {
+      "step": "post_task_1",
+      "txHash": "0x2f9ed2b2914bbc1c5d0baef0c77c0768a460c620a388f8dbebfb60473a4ecb7e",
+      "taskId": "12",
+      "deadline": "27542546"
+    },
+    {
+      "step": "post_task_2",
+      "txHash": "0x3ac36bdf700c03b857f4e4053d60d9d0000b0234196887222c0fc7cd88b45542",
+      "taskId": "13",
+      "deadline": "27542552"
+    },
+    {
+      "step": "accept_task_1",
+      "txHash": "0xcb4a9172f247c461c3edac0d3f4022609826f8f98d3f2aebb4030d7fad76a47c",
+      "taskId": "12"
+    },
+    {
+      "step": "accept_task_2",
+      "txHash": "0x08c7fca5ea6f27dfb8b11e97cd5d493fbe6c173c54658276adff96ff5d0309ed",
+      "taskId": "13"
+    },
+    {
+      "step": "deliver_task_1",
+      "targetAddress": "0x70eD3f2AC5F066c8e80Faa1C7582967573f914d2"
+    },
+    {
+      "step": "resolve_task_1",
+      "txHash": "0x73a5981e25f700269778a56e60eb9b353e6c216ba32eeeb17c2833033459149c",
+      "taskId": "12"
+    },
+    {
+      "step": "resolve_task_2",
+      "txHash": "0x696b5de0a5426ba0515fcc52a8b84e6e526daf5a4088f9fc3563d82a1edaa6f8",
+      "taskId": "13"
+    },
+    {
+      "step": "post_task_3",
+      "txHash": "0x751bed05ac1b29e6aea9119e5096521d16c4a028ec3abc733c79ab92ebbf0e2c",
+      "taskId": "16",
+      "deadline": "27545569"
+    }
+  ],
+  "finalBalances": {
+    "poster": "15000000",
+    "goodBot": "23000000",
+    "badBot": "0",
+    "resolver": "0"
+  }
+}

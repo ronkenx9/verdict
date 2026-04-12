@@ -1,0 +1,97 @@
+{
+  "network": "xlayer_testnet",
+  "runTag": "fast1",
+  "generatedAt": "2026-04-12T13:15:53.799Z",
+  "contracts": {
+    "verdictCore": "0x8d149c622cf56f2663b5368Bc1382c9C711972a8",
+    "verdictScore": "0x70E7Af46711aAB0F8bdb8fe98D9D48F8030CAedf",
+    "taskMarket": "0x73d311B3aA256f490c2a6AF77D970fabe7c09acd",
+    "settlementToken": "0xD650E687412e548C2aa7718581d7541876aD72E0"
+  },
+  "agents": {
+    "poster": "0x9758015ff18E80c7C296f5288889af39504C3F7d",
+    "goodbot": "0x3aECc81046b67d4FA61556c30d1eF1E6095e057d",
+    "badbot": "0x28305790A522aDBd40235d22D5B6a02ec9490962",
+    "resolver": "0xbFDF86589E86D4024048B5eC9b204056C21F609b"
+  },
+  "transactions": [
+    {
+      "step": "fund_poster",
+      "txHash": "0x522d1139753aed2c0bf82926265b1946f8f77bcc5a6e4a2e165f4e4079f2ac79"
+    },
+    {
+      "step": "fund_goodbot",
+      "txHash": "0x6aacc82b3e10cf458ac1ed65433ff07e7048edc10123f58b927c5a8c0d63a9ce"
+    },
+    {
+      "step": "fund_badbot",
+      "txHash": "0x9d9af0c65df22812d70c88581aa430f4dc11f5959dbd43bfee6e4f716e8e4eb1"
+    },
+    {
+      "step": "fund_resolver",
+      "txHash": "0x26a977d3e5c5fd2e0ea388bae80ddf62b53660c9149c799bb18dea69d56b68ce"
+    },
+    {
+      "step": "post_task_1",
+      "txHash": "0x45121f393e29c5dd962eced5f943893d8b66425d1c4696cf80d73ac93051b565",
+      "taskId": "14",
+      "deadline": "27541053"
+    },
+    {
+      "step": "post_task_2",
+      "txHash": "0xaf93d45665f26f6fc257d3516490c893a0648f15cbc2a26a61fa585bf028e91b",
+      "taskId": "15",
+      "deadline": "27541059"
+    },
+    {
+      "step": "accept_task_1",
+      "txHash": "0xfd8a16f8bdd8b4b86e5f925fc60ce62a31826beb739faae2f4ea75f80a7af1a0",
+      "taskId": "14"
+    },
+    {
+      "step": "accept_task_2",
+      "txHash": "0xdcc1fd44f26a946d4b02747a07fa9083391d2c6ab91aa59ae23203b69128156d",
+      "taskId": "15"
+    },
+    {
+      "step": "deliver_task_1",
+      "targetAddress": "0x3aECc81046b67d4FA61556c30d1eF1E6095e057d"
+    },
+    {
+      "step": "resolve_task_1",
+      "txHash": "0x078d4e6658175892aae75b5499e347f58ad0c5945405b45c7da2050f8fa187e3",
+      "taskId": "14"
+    },
+    {
+      "step": "resolve_task_2",
+      "txHash": "0x6302124255da239c35876b1e4d0ded0bb56c7a7b5108da16498c49fa74337a31",
+      "taskId": "15"
+    },
+    {
+      "step": "post_task_3",
+      "txHash": "0xeb1c615c63acdcd8a367f1f6db02a8657c56fe05d57da0dc4d82db3438296b7c",
+      "taskId": "16",
+      "deadline": "27541160"
+    },
+    {
+      "step": "accept_task_3",
+      "txHash": "0x926d404de1ab5db35931fe525bd44f3833c53ba29f3a65449c6218162e04831c",
+      "taskId": "16"
+    },
+    {
+      "step": "deliver_task_3",
+      "targetAddress": "0x3aECc81046b67d4FA61556c30d1eF1E6095e057d"
+    },
+    {
+      "step": "resolve_task_3",
+      "txHash": "0x0bde5c2ec3feea3b841d602bd526593f0130799eeaabb9327de0db14263bb6ff",
+      "taskId": "16"
+    }
+  ],
+  "finalBalances": {
+    "poster": "15000000",
+    "goodBot": "33000000",
+    "badBot": "0",
+    "resolver": "0"
+  }
+}

@@ -1,0 +1,910 @@
+{
+  "xlayer_testnet": {
+    "contract": "VerdictCore",
+    "address": "0x8d149c622cf56f2663b5368Bc1382c9C711972a8",
+    "settlementToken": "0xD650E687412e548C2aa7718581d7541876aD72E0",
+    "settlementTokenSymbol": "mUSDC",
+    "settlementTokenDecimals": 6,
+    "chainId": 1952,
+    "network": "xlayer_testnet",
+    "deployer": "0xECe3D6756a7C4b93ae5e4aE4157201043E35B5c9",
+    "blockNumber": 27274298,
+    "deployedAt": "2026-04-09T11:12:15.211Z",
+    "explorerUrl": "https://www.oklink.com/xlayer-test/address/0x8d149c622cf56f2663b5368Bc1382c9C711972a8",
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "settlementTokenAddress",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "ReentrancyGuardReentrantCall",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          }
+        ],
+        "name": "SafeERC20FailedOperation",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "agentA",
+            "type": "address"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "agentB",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "targetAddress",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "targetAmount",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "targetBlock",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          }
+        ],
+        "name": "SLARegistered",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "met",
+            "type": "bool"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "recipient",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "observedBalance",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "resolvedAtBlock",
+            "type": "uint256"
+          }
+        ],
+        "name": "SLAResolved",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "agent",
+            "type": "address"
+          }
+        ],
+        "name": "getAgentSlaIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getSLA",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "agentA",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "agentB",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "targetAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "targetAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "targetBlock",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "collateral",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "resolved",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct VerdictCore.SLA",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "agentA",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "agentB",
+                "type": "address"
+              },
+              {
+                "internalType": "address",
+                "name": "targetAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "targetAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "targetBlock",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "collateral",
+                "type": "uint256"
+              },
+              {
+                "internalType": "bool",
+                "name": "resolved",
+                "type": "bool"
+              }
+            ],
+            "internalType": "struct VerdictCore.SLA",
+            "name": "sla",
+            "type": "tuple"
+          }
+        ],
+        "name": "register",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "payable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "name": "resolve",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "settlementToken",
+        "outputs": [
+          {
+            "internalType": "contract IERC20",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "slaCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "name": "status",
+        "outputs": [
+          {
+            "internalType": "string",
+            "name": "lifecycle",
+            "type": "string"
+          },
+          {
+            "internalType": "uint256",
+            "name": "blocksRemaining",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "currentBalance",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+  },
+  "xlayer_testnet_TaskMarket": {
+    "contract": "TaskMarket",
+    "address": "0x73d311B3aA256f490c2a6AF77D970fabe7c09acd",
+    "verdictCore": "0x8d149c622cf56f2663b5368Bc1382c9C711972a8",
+    "verdictScore": "0x70E7Af46711aAB0F8bdb8fe98D9D48F8030CAedf",
+    "settlementToken": "0xD650E687412e548C2aa7718581d7541876aD72E0",
+    "settlementTokenSymbol": "mUSDC",
+    "settlementTokenDecimals": 6,
+    "chainId": 1952,
+    "network": "xlayer_testnet",
+    "deployer": "0xECe3D6756a7C4b93ae5e4aE4157201043E35B5c9",
+    "blockNumber": 27534729,
+    "deployedAt": "2026-04-12T11:32:56.428Z",
+    "explorerUrl": "https://www.oklink.com/xlayer-test/address/0x73d311B3aA256f490c2a6AF77D970fabe7c09acd",
+    "abi": [
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_verdictCore",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_settlementToken",
+            "type": "address"
+          },
+          {
+            "internalType": "address",
+            "name": "_verdictScore",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "inputs": [],
+        "name": "ReentrancyGuardReentrantCall",
+        "type": "error"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "token",
+            "type": "address"
+          }
+        ],
+        "name": "SafeERC20FailedOperation",
+        "type": "error"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "executor",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "name": "TaskAccepted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "poster",
+            "type": "address"
+          }
+        ],
+        "name": "TaskCancelled",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          },
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "poster",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "bounty",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "TaskPosted",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "met",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "address",
+            "name": "bountyRecipient",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "bounty",
+            "type": "uint256"
+          }
+        ],
+        "name": "TaskResolved",
+        "type": "event"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "name": "acceptTask",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "slaId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "name": "cancelTask",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "getOpenTaskIds",
+        "outputs": [
+          {
+            "internalType": "uint256[]",
+            "name": "",
+            "type": "uint256[]"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "name": "getTask",
+        "outputs": [
+          {
+            "components": [
+              {
+                "internalType": "address",
+                "name": "poster",
+                "type": "address"
+              },
+              {
+                "internalType": "bytes32",
+                "name": "descHash",
+                "type": "bytes32"
+              },
+              {
+                "internalType": "uint256",
+                "name": "bounty",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "collateralReq",
+                "type": "uint256"
+              },
+              {
+                "internalType": "uint256",
+                "name": "targetAmount",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "targetAddress",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "deadline",
+                "type": "uint256"
+              },
+              {
+                "internalType": "address",
+                "name": "executor",
+                "type": "address"
+              },
+              {
+                "internalType": "uint256",
+                "name": "slaId",
+                "type": "uint256"
+              },
+              {
+                "internalType": "enum TaskMarket.TaskStatus",
+                "name": "status",
+                "type": "uint8"
+              }
+            ],
+            "internalType": "struct TaskMarket.Task",
+            "name": "",
+            "type": "tuple"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "bytes32",
+            "name": "descHash",
+            "type": "bytes32"
+          },
+          {
+            "internalType": "uint256",
+            "name": "bounty",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralReq",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "targetAmount",
+            "type": "uint256"
+          },
+          {
+            "internalType": "address",
+            "name": "targetAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "deadline",
+            "type": "uint256"
+          }
+        ],
+        "name": "postTask",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "uint256",
+            "name": "taskId",
+            "type": "uint256"
+          }
+        ],
+        "name": "resolveTask",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "scoreEnabled",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "settlementToken",
+        "outputs": [
+          {
+            "internalType": "contract IERC20",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "taskCount",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "verdictCore",
+        "outputs": [
+          {
+            "internalType": "contract IVerdictCore",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "verdictScore",
+        "outputs": [
+          {
+            "internalType": "contract IVerdictScore",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+  },
+  "xlayer_testnet_VerdictScore": {
+    "contract": "VerdictScore",
+    "address": "0x70E7Af46711aAB0F8bdb8fe98D9D48F8030CAedf",
+    "taskMarket": "0x73d311B3aA256f490c2a6AF77D970fabe7c09acd",
+    "chainId": 1952,
+    "network": "xlayer_testnet",
+    "deployer": "0xECe3D6756a7C4b93ae5e4aE4157201043E35B5c9",
+    "blockNumber": 27534729,
+    "deployedAt": "2026-04-12T11:32:56.428Z",
+    "explorerUrl": "https://www.oklink.com/xlayer-test/address/0x70E7Af46711aAB0F8bdb8fe98D9D48F8030CAedf",
+    "abi": [
+      {
+        "inputs": [],
+        "stateMutability": "nonpayable",
+        "type": "constructor"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "executor",
+            "type": "address"
+          },
+          {
+            "indexed": false,
+            "internalType": "bool",
+            "name": "met",
+            "type": "bool"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "totalMet",
+            "type": "uint256"
+          },
+          {
+            "indexed": false,
+            "internalType": "uint256",
+            "name": "totalSlashed",
+            "type": "uint256"
+          }
+        ],
+        "name": "ScoreRecorded",
+        "type": "event"
+      },
+      {
+        "anonymous": false,
+        "inputs": [
+          {
+            "indexed": true,
+            "internalType": "address",
+            "name": "writer",
+            "type": "address"
+          }
+        ],
+        "name": "WriterSet",
+        "type": "event"
+      },
+      {
+        "inputs": [],
+        "name": "authorizedWriter",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "deployer",
+        "outputs": [
+          {
+            "internalType": "address",
+            "name": "",
+            "type": "address"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "executor",
+            "type": "address"
+          }
+        ],
+        "name": "getScore",
+        "outputs": [
+          {
+            "internalType": "uint256",
+            "name": "met",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "slashed",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralMet",
+            "type": "uint256"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateralSlashed",
+            "type": "uint256"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "executor",
+            "type": "address"
+          },
+          {
+            "internalType": "bool",
+            "name": "met",
+            "type": "bool"
+          },
+          {
+            "internalType": "uint256",
+            "name": "collateral",
+            "type": "uint256"
+          }
+        ],
+        "name": "record",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [
+          {
+            "internalType": "address",
+            "name": "_writer",
+            "type": "address"
+          }
+        ],
+        "name": "setWriter",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+      },
+      {
+        "inputs": [],
+        "name": "writerActive",
+        "outputs": [
+          {
+            "internalType": "bool",
+            "name": "",
+            "type": "bool"
+          }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+      }
+    ]
+  }
+}

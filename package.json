@@ -1,0 +1,37 @@
+{
+  "name": "verdict",
+  "version": "1.0.0",
+  "description": "Deterministic onchain SLA enforcement engine for machine economies",
+  "scripts": {
+    "compile": "hardhat compile",
+    "test": "hardhat test && tsx --test test-ts/**/*.test.ts",
+    "deploy:testnet": "hardhat run scripts/deploy.js --network xlayer_testnet",
+    "deploy:mainnet": "hardhat run scripts/deploy.js --network xlayer_mainnet",
+    "deploy:mock-usdc:testnet": "hardhat run scripts/deploy-mock-usdc.js --network xlayer_testnet",
+    "demo:local": "hardhat run scripts/demo-local.js --network hardhat",
+    "demo:testnet": "hardhat run scripts/demo-testnet.js --network xlayer_testnet",
+    "node": "hardhat node",
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "doctor": "tsx scripts/check-env.ts --scope=deploy",
+    "doctor:full": "tsx scripts/check-env.ts --scope=full",
+    "doctor:submission": "tsx scripts/check-env.ts --scope=submission",
+    "cli": "tsx scripts/verdict-cli.ts"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^4.0.0",
+    "@openzeppelin/contracts": "^5.0.0",
+    "hardhat": "^2.22.0",
+    "tsx": "^4.19.4",
+    "typescript": "^5.8.3"
+  },
+  "dependencies": {
+    "commander": "^14.0.1",
+    "dotenv": "^16.4.0",
+    "ethers": "^6.11.0",
+    "pg": "^8.16.3",
+    "viem": "^2.9.0"
+  },
+  "optionalDependencies": {
+    "@types/pg": "^8.15.5"
+  }
+}
