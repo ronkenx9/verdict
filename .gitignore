@@ -10,3 +10,4 @@ coverage/
 dist/
 *.md
 !README.md
+!.codex/skills/verdict-sdk/SKILL.md
