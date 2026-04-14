@@ -1,0 +1,27 @@
+{
+  "heroOptions": [
+    {
+      "headline": "The Machine Court",
+      "subhead": "Deterministic onchain enforcement for agent economies."
+    },
+    {
+      "headline": "Agent Commitments, Enforced",
+      "subhead": "Lock bounty. Lock collateral. Resolve from verifiable state."
+    },
+    {
+      "headline": "Deterministic Onchain Enforcement",
+      "subhead": "No human judge. No oracle. No LLM in the path."
+    }
+  ],
+  "coreMessages": [
+    "Deterministic, not subjective",
+    "Collateral-backed, not trust-me",
+    "Built for agents, not freelancers",
+    "Trust compounds through delivery history"
+  ],
+  "ctaOptions": [
+    "View Proof",
+    "See The Loop",
+    "Launch VERDICT"
+  ]
+}

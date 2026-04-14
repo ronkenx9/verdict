@@ -1,0 +1,75 @@
+<svg width="1500" height="500" viewBox="0 0 1500 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1500" height="500" fill="#050505"/>
+  <rect x="0" y="0" width="1500" height="500" fill="url(#bgGlow)"/>
+  <g opacity="0.28">
+    <path d="M0 84H1500" stroke="url(#gridLine)" stroke-width="1"/>
+    <path d="M0 166H1500" stroke="url(#gridLine)" stroke-width="1"/>
+    <path d="M0 250H1500" stroke="url(#gridLine)" stroke-width="1"/>
+    <path d="M0 334H1500" stroke="url(#gridLine)" stroke-width="1"/>
+    <path d="M0 416H1500" stroke="url(#gridLine)" stroke-width="1"/>
+    <path d="M214 0V500" stroke="url(#gridLineVert)" stroke-width="1"/>
+    <path d="M536 0V500" stroke="url(#gridLineVert)" stroke-width="1"/>
+    <path d="M858 0V500" stroke="url(#gridLineVert)" stroke-width="1"/>
+    <path d="M1180 0V500" stroke="url(#gridLineVert)" stroke-width="1"/>
+  </g>
+  <g opacity="0.9">
+    <circle cx="1140" cy="250" r="198" fill="url(#redCore)"/>
+    <circle cx="1140" cy="250" r="142" stroke="#F5F5F2" stroke-opacity="0.26" stroke-width="2"/>
+    <circle cx="1140" cy="250" r="96" stroke="#F5F5F2" stroke-opacity="0.18" stroke-width="2"/>
+  </g>
+  <g transform="translate(92 94)">
+    <rect width="176" height="176" rx="40" fill="#050505"/>
+    <rect x="14" y="14" width="148" height="148" rx="34" stroke="url(#frame)" stroke-width="5"/>
+    <path d="M54 54L88 122L122 54" stroke="url(#verdictRed)" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M74 80H102" stroke="#F5F5F2" stroke-width="6" stroke-linecap="round"/>
+    <path d="M88 36V50" stroke="#F5F5F2" stroke-width="5" stroke-linecap="round"/>
+    <circle cx="88" cy="50" r="4" fill="#F5F5F2"/>
+  </g>
+  <g>
+    <text x="92" y="338" fill="#F5F5F2" font-size="132" font-weight="800" font-family="Syne, Arial, sans-serif" letter-spacing="-5">VERDICT</text>
+    <text x="99" y="392" fill="#C4C4BF" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="5">THE MACHINE COURT FOR AGENT ECONOMIES</text>
+    <text x="100" y="438" fill="#E22B2B" font-size="24" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="4">DETERMINISTIC ONCHAIN SLA ENFORCEMENT</text>
+  </g>
+  <g opacity="0.88">
+    <rect x="980" y="104" width="318" height="212" rx="22" fill="rgba(7,7,7,0.78)"/>
+    <rect x="980" y="104" width="318" height="212" rx="22" stroke="rgba(255,255,255,0.08)"/>
+    <text x="1012" y="150" fill="#BDBDB7" font-size="18" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="3">SIGNAL</text>
+    <text x="1012" y="198" fill="#F5F5F2" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">NO ORACLES</text>
+    <text x="1012" y="234" fill="#F5F5F2" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">NO HUMAN JUDGE</text>
+    <text x="1012" y="270" fill="#F5F5F2" font-size="30" font-weight="700" font-family="IBM Plex Mono, monospace">NO LLM IN PATH</text>
+  </g>
+  <defs>
+    <radialGradient id="bgGlow" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1100 248) rotate(180) scale(670 400)">
+      <stop stop-color="#140808"/>
+      <stop offset="0.45" stop-color="#090909"/>
+      <stop offset="1" stop-color="#050505"/>
+    </radialGradient>
+    <radialGradient id="redCore" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(1140 250) rotate(90) scale(198)">
+      <stop stop-color="#E22B2B" stop-opacity="0.95"/>
+      <stop offset="0.4" stop-color="#B41F1F" stop-opacity="0.38"/>
+      <stop offset="1" stop-color="#700C0C" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="gridLine" x1="0" y1="0" x2="1500" y2="0" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="0.2" stop-color="#262626"/>
+      <stop offset="0.8" stop-color="#262626"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="gridLineVert" x1="0" y1="0" x2="0" y2="500" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#050505"/>
+      <stop offset="0.2" stop-color="#262626"/>
+      <stop offset="0.8" stop-color="#262626"/>
+      <stop offset="1" stop-color="#050505"/>
+    </linearGradient>
+    <linearGradient id="verdictRed" x1="54" y1="54" x2="122" y2="122" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF5A5A"/>
+      <stop offset="0.5" stop-color="#E22B2B"/>
+      <stop offset="1" stop-color="#961616"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="14" y1="14" x2="162" y2="162" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B2B2B"/>
+      <stop offset="0.5" stop-color="#6C6C6C"/>
+      <stop offset="1" stop-color="#202020"/>
+    </linearGradient>
+  </defs>
+</svg>

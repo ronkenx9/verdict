@@ -11,3 +11,4 @@ dist/
 *.md
 !README.md
 !.codex/skills/verdict-sdk/SKILL.md
+!brand/BRAND_SYSTEM.md

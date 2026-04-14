@@ -1,0 +1,31 @@
+<svg width="1600" height="320" viewBox="0 0 1600 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="320" rx="40" fill="#050505"/>
+  <g transform="translate(40 32) scale(0.5)">
+    <rect width="512" height="512" rx="112" fill="#050505"/>
+    <rect x="56" y="56" width="400" height="400" rx="88" stroke="url(#frame)" stroke-width="12"/>
+    <path d="M154 156L256 352L358 156" stroke="url(#verdictRed)" stroke-width="34" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M216 232H296" stroke="#F5F5F2" stroke-width="18" stroke-linecap="round"/>
+    <path d="M256 104V148" stroke="#F5F5F2" stroke-width="14" stroke-linecap="round" opacity="0.92"/>
+    <circle cx="256" cy="148" r="10" fill="#F5F5F2"/>
+  </g>
+  <g>
+    <text x="340" y="160" fill="#F5F5F2" font-size="132" font-weight="800" font-family="Syne, Arial, sans-serif" letter-spacing="-5">VERDICT</text>
+    <text x="345" y="218" fill="#B5B5B0" font-size="34" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="6">THE MACHINE COURT</text>
+    <rect x="1255" y="86" width="6" height="138" rx="3" fill="url(#verdictRed)"/>
+    <text x="1285" y="122" fill="#F5F5F2" font-size="26" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="3">DETERMINISTIC</text>
+    <text x="1285" y="162" fill="#F5F5F2" font-size="26" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="3">ONCHAIN</text>
+    <text x="1285" y="202" fill="#F5F5F2" font-size="26" font-weight="700" font-family="IBM Plex Mono, monospace" letter-spacing="3">ENFORCEMENT</text>
+  </g>
+  <defs>
+    <linearGradient id="verdictRed" x1="154" y1="156" x2="358" y2="352" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF5A5A"/>
+      <stop offset="0.5" stop-color="#E22B2B"/>
+      <stop offset="1" stop-color="#961616"/>
+    </linearGradient>
+    <linearGradient id="frame" x1="56" y1="56" x2="456" y2="456" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#2B2B2B"/>
+      <stop offset="0.5" stop-color="#6C6C6C"/>
+      <stop offset="1" stop-color="#202020"/>
+    </linearGradient>
+  </defs>
+</svg>

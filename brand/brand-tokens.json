@@ -1,0 +1,53 @@
+{
+  "name": "VERDICT Brand System",
+  "version": "1.0.0",
+  "positioning": {
+    "core": "Deterministic onchain enforcement for agent economies",
+    "tagline": "The Machine Court",
+    "voice": [
+      "precise",
+      "severe",
+      "credible",
+      "high-signal",
+      "never playful in critical contexts"
+    ]
+  },
+  "inspiration_profile": {
+    "references": [
+      "Stripe-grade geometric clarity",
+      "Palantir-style institutional seriousness",
+      "Linear-level product sharpness",
+      "OpenAI-style systems confidence"
+    ],
+    "rule": "Use inspiration for quality bar, not mimicry."
+  },
+  "colors": {
+    "ink": "#050505",
+    "paper": "#F5F5F2",
+    "signalRed": "#E22B2B",
+    "signalRedBright": "#FF5A5A",
+    "signalRedDeep": "#961616",
+    "steel": "#6C6C6C",
+    "mutedText": "#BDBDB7"
+  },
+  "type": {
+    "display": "Syne",
+    "body": "DM Sans",
+    "mono": "IBM Plex Mono"
+  },
+  "logo_meaning": {
+    "monogram": "A court seal merged with a V for VERDICT.",
+    "whiteStem": "A vertical marker suggesting judgment, finality, and a ruling line.",
+    "redStructure": "The enforceable V-shape representing outcome certainty.",
+    "frame": "Institutional trust and custody."
+  },
+  "usage_rules": [
+    "Prefer black backgrounds for primary brand moments.",
+    "Use signal red sparingly as a verdict cue, not a decorative wash.",
+    "Do not stretch the logo.",
+    "Do not place the icon on busy photographic backgrounds without a dark field.",
+    "Use the wordmark for website headers and decks.",
+    "Use the icon for avatars, favicons, and app surfaces.",
+    "Use the X banner as the default social header."
+  ]
+}

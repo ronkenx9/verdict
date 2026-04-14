@@ -1,0 +1,156 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VERDICT Brand Preview</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #050505;
+      --paper: #f5f5f2;
+      --signal: #e22b2b;
+      --muted: #bdbdb7;
+      --steel: #6c6c6c;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #050505 0%, #101010 100%);
+      color: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      padding: 48px;
+    }
+    .wrap {
+      max-width: 1400px;
+      margin: 0 auto;
+      display: grid;
+      gap: 28px;
+    }
+    .card {
+      background: rgba(255,255,255,0.03);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 28px;
+      padding: 28px;
+      backdrop-filter: blur(18px);
+    }
+    .eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 12px;
+    }
+    h1, h2 {
+      font-family: "Syne", sans-serif;
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+    h1 { font-size: 64px; margin-bottom: 12px; }
+    h2 { font-size: 30px; margin-bottom: 18px; }
+    p {
+      margin: 0;
+      max-width: 900px;
+      color: #d6d6d1;
+      line-height: 1.6;
+    }
+    .assets {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 24px;
+      align-items: start;
+    }
+    .asset-box {
+      background: #0a0a0a;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 18px;
+    }
+    .asset-box img {
+      width: 100%;
+      display: block;
+      border-radius: 16px;
+    }
+    .palette {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(120px, 1fr));
+      gap: 16px;
+    }
+    .swatch {
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    .tone {
+      height: 110px;
+    }
+    .meta {
+      background: #0c0c0c;
+      padding: 12px 14px;
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+    .banner img {
+      width: 100%;
+      border-radius: 22px;
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="card">
+      <div class="eyebrow">Brand System</div>
+      <h1>VERDICT</h1>
+      <p>Institutional, severe, and machine-legible. The identity is built to feel like a protocol you trust with collateral, not a speculative meme brand.</p>
+    </div>
+
+    <div class="card assets">
+      <div class="asset-box">
+        <div class="eyebrow">Primary Icon</div>
+        <img src="./verdict-logo.svg" alt="VERDICT logo" />
+      </div>
+      <div class="asset-box">
+        <div class="eyebrow">Wordmark</div>
+        <img src="./verdict-wordmark.svg" alt="VERDICT wordmark" />
+      </div>
+    </div>
+
+    <div class="card banner">
+      <div class="eyebrow">X Banner</div>
+      <img src="./verdict-x-banner.svg" alt="VERDICT X banner" />
+    </div>
+
+    <div class="card">
+      <h2>Color System</h2>
+      <div class="palette">
+        <div class="swatch">
+          <div class="tone" style="background:#050505"></div>
+          <div class="meta">Ink<br>#050505</div>
+        </div>
+        <div class="swatch">
+          <div class="tone" style="background:#F5F5F2"></div>
+          <div class="meta" style="color:#333">Paper<br>#F5F5F2</div>
+        </div>
+        <div class="swatch">
+          <div class="tone" style="background:#E22B2B"></div>
+          <div class="meta">Signal Red<br>#E22B2B</div>
+        </div>
+        <div class="swatch">
+          <div class="tone" style="background:#961616"></div>
+          <div class="meta">Signal Deep<br>#961616</div>
+        </div>
+        <div class="swatch">
+          <div class="tone" style="background:#6C6C6C"></div>
+          <div class="meta">Steel<br>#6C6C6C</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

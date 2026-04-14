@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>VERDICT Brand Pack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Sans:wght@400;500;700&family=IBM+Plex+Mono:wght@400;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #050505;
+      --paper: #f5f5f2;
+      --signal: #e22b2b;
+      --muted: #bdbdb7;
+      --panel: rgba(255,255,255,0.04);
+      --border: rgba(255,255,255,0.08);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: linear-gradient(180deg, #050505 0%, #101010 100%);
+      color: var(--paper);
+      font-family: "DM Sans", sans-serif;
+      padding: 40px;
+    }
+    .wrap {
+      max-width: 1440px;
+      margin: 0 auto;
+      display: grid;
+      gap: 24px;
+    }
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 28px;
+      padding: 28px;
+      backdrop-filter: blur(14px);
+    }
+    .eyebrow {
+      font-family: "IBM Plex Mono", monospace;
+      font-size: 12px;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 14px;
+    }
+    h1, h2 {
+      font-family: "Syne", sans-serif;
+      margin: 0;
+      letter-spacing: -0.04em;
+    }
+    h1 { font-size: 70px; margin-bottom: 10px; }
+    h2 { font-size: 30px; margin-bottom: 16px; }
+    p {
+      margin: 0;
+      color: #d8d8d2;
+      line-height: 1.6;
+      max-width: 920px;
+    }
+    .hero {
+      display: grid;
+      grid-template-columns: 1.2fr 420px;
+      gap: 28px;
+      align-items: center;
+    }
+    .logo-box, .banner-box {
+      background: #0a0a0a;
+      border: 1px solid var(--border);
+      border-radius: 24px;
+      padding: 20px;
+    }
+    .logo-box img, .banner-box iframe {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+    }
+    .banner-box iframe {
+      height: 500px;
+      border: 0;
+      background: #000;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+    .pill {
+      border: 1px solid var(--border);
+      border-radius: 18px;
+      padding: 18px;
+      background: rgba(255,255,255,0.02);
+    }
+    .pill strong {
+      display: block;
+      margin-bottom: 8px;
+      font-family: "IBM Plex Mono", monospace;
+      color: var(--paper);
+      font-size: 13px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <section class="card hero">
+      <div>
+        <div class="eyebrow">Brand Direction</div>
+        <h1>VERDICT</h1>
+        <p>The machine court for agent economies. Severe, credible, and infrastructure-grade. The brand should feel like a system that can hold collateral and make a ruling, not like a generic crypto launch.</p>
+      </div>
+      <div class="logo-box">
+        <img src="./verdict-logo-primary.png" alt="VERDICT primary logo" />
+      </div>
+    </section>
+
+    <section class="card">
+      <div class="eyebrow">X Banner</div>
+      <div class="banner-box">
+        <iframe src="./x-banner.html" title="VERDICT X banner"></iframe>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>Core System</h2>
+      <div class="grid">
+        <div class="pill">
+          <strong>Positioning</strong>
+          The enforcement layer for autonomous work.
+        </div>
+        <div class="pill">
+          <strong>One-Liner</strong>
+          The machine court for agent economies.
+        </div>
+        <div class="pill">
+          <strong>Voice</strong>
+          Precise. Severe. Credible. Calm.
+        </div>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,18 +1,20 @@
 # VERDICT
 
-Deterministic onchain SLA enforcement for machine economies.
+The machine court for agent economies.
 
-VERDICT makes agent commitments enforceable without oracles, judges, or LLMs in the resolution path. A task locks collateral on X Layer, and one deterministic resolution transaction decides whether the executor gets paid or gets slashed.
+VERDICT is a deterministic onchain enforcement layer for autonomous work. It lets a poster lock a bounty, require executor collateral, and resolve outcomes from narrow, verifiable chain state instead of human judgment. That makes agent commitments enforceable, auditable, and economically real.
 
 ## Why This Matters
 
-Most agent systems can promise work, but they cannot enforce delivery. VERDICT turns a task into an onchain contract with three properties:
+Most agent systems can promise work, but they cannot enforce delivery. VERDICT exists to close that gap.
+
+Instead of treating autonomous work as reputation theater, VERDICT turns a task into an onchain contract with three consequences:
 
 - The bounty is escrowed.
 - The executor posts collateral.
 - Resolution is decided by deterministic onchain state, not by opinion.
 
-`VerdictScore` extends this with progressive trust, so executors who deliver repeatedly can earn lower collateral requirements over time.
+`VerdictScore` extends this with progressive trust, so executors who deliver repeatedly can earn lower collateral requirements over time. The result is not just better coordination. It is a more credible market for autonomous work.
 
 ## Fastest Verification Path
 
@@ -53,12 +55,12 @@ At the core, VERDICT enforces a simple machine-deliverable SLA:
 4. If the condition is met, collateral returns to the executor and the bounty is paid out.
 5. If the condition is not met, the collateral is slashed to the poster.
 
-The current primitive is intentionally narrow. Resolution reads only:
+This primitive is intentionally narrow. Resolution reads only:
 
 - `block.number`
 - `balanceOf(targetAddress)`
 
-That constraint is the point. The narrower the resolver, the harder it is to manipulate.
+That constraint is the point. The narrower the resolver, the harder it is to manipulate, and the more the system behaves like infrastructure instead of arbitration theater.
 
 ## Core Contracts
 
@@ -131,7 +133,7 @@ It demonstrates:
 - `BadBot`: `met=0`, `slashed=1`, `collateralSlashed=5.00 mUSDC`
 - First successful task produced only `5bps (0.05%)` of discount
 
-That small first discount is important because it keeps the proof honest. The trust system is live, but it does not pretend one success magically makes collateral disappear.
+That small first discount is important because it keeps the proof honest. The trust system is live, but it does not pretend one success magically makes collateral disappear. VERDICT is designed to feel severe, not generous.
 
 ### Direct VerdictCore Proof
 
@@ -230,6 +232,8 @@ These are not implementation details. They are the product.
 - No multisig custody for collateral
 - Single-transaction resolution
 - Deterministic reads only
+
+This is why VERDICT should be understood as an enforcement layer, not just a workflow tool.
 
 ## Onchain OS Enforcement Loop
 
@@ -384,8 +388,8 @@ Excluding mainnet deployment, the project is already beyond concept stage:
 - trust scoring is live onchain
 - proof verification is automated
 
-The remaining work is mainly operational hardening, distribution, and production rollout.
+The remaining work is mainly operational hardening, distribution, and production rollout. The core category claim is already real: VERDICT is not a concept deck pretending to be infrastructure. It is infrastructure becoming a category.
 
 ## One-Line Summary
 
-VERDICT is a machine court: escrowed tasks, deterministic settlement, and onchain trust for agent economies.
+VERDICT is the machine court: escrowed tasks, deterministic settlement, and onchain trust for agent economies.

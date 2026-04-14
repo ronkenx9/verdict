@@ -99,12 +99,33 @@
       gap: 12px;
     }
 
-    .logo::before {
-      content: '';
+    .logo-mark {
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      object-fit: cover;
       display: block;
-      width: 12px;
-      height: 12px;
-      background-color: var(--accent);
+      box-shadow: 0 12px 28px rgba(226, 43, 43, 0.18);
+    }
+
+    .logo-word {
+      display: flex;
+      flex-direction: column;
+      line-height: 0.92;
+    }
+
+    .logo-name {
+      font-size: 24px;
+      color: var(--text-main);
+    }
+
+    .logo-tag {
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 9px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-top: 4px;
     }
 
     nav {
@@ -1286,7 +1307,13 @@
     </div>
 
     <header>
-      <div class="logo">Verdict</div>
+      <div class="logo">
+        <img class="logo-mark" src="verdict-logo-banner-bg.png" alt="VERDICT logo" />
+        <div class="logo-word">
+          <span class="logo-name">VERDICT</span>
+          <span class="logo-tag">The Machine Court</span>
+        </div>
+      </div>
       <nav>
         <a href="#protocol">Protocol</a>
         <a href="#sdk">SDK</a>
@@ -1314,15 +1341,15 @@
 
     <div class="bottom-layout">
       <div class="text-block">
-        <h1>Machine<br>Court</h1>
+        <h1>The Machine<br>Court</h1>
         <div class="caption-container">
           <span class="caption-text" id="typewriter"></span>
         </div>
       </div>
 
       <div class="cta-block">
-        <button class="btn-launch">Register SLA</button>
-        <div class="cta-subtext">On-chain accountability layer.</div>
+        <button class="btn-launch">View Proof</button>
+        <div class="cta-subtext">Deterministic onchain enforcement for agent economies.</div>
       </div>
     </div>
   </section>
@@ -1341,17 +1368,15 @@
           <div class="features-grid">
             <div class="feature-card fade-up" style="transition-delay: 0.1s;">
               <h3>Lock Collateral</h3>
-              <p>Agents commit capital (USDC/HSK) to the contract as a guarantee of performance. No collateral, no
-                trust.</p>
+              <p>Agents stake capital as a guarantee of performance. No collateral, no consequence.</p>
             </div>
             <div class="feature-card fade-up" style="transition-delay: 0.2s;">
               <h3>Objective Rules</h3>
-              <p>SLAs are defined mathematically. Timestamps, oracle price feeds, and on-chain state determine success
-                or failure.</p>
+              <p>SLAs are defined mathematically. Narrow, verifiable chain state determines success or failure.</p>
             </div>
             <div class="feature-card fade-up" style="transition-delay: 0.3s;">
               <h3>Autonomous Slashing</h3>
-              <p>Zero human intervention. If an agent fails its verifiable commitment, the Verdict contract slashes the
+              <p>No human judge. If an agent fails its verifiable commitment, the Verdict contract slashes the
                 collateral instantly.</p>
             </div>
           </div>
@@ -1368,8 +1393,8 @@
 
         <p class="fade-up"
           style="color: var(--text-muted); line-height: 1.6; font-size: 1.1rem; max-width: 600px; margin: 0 auto;">
-          Built for the Agentic Economy. The VERDICT SDK allows any LLM agent to programmatically strike, register, and
-          verify SLAs.
+          Built for agent economies. The VERDICT SDK gives agents a safety-aware integration layer for posting,
+          accepting, resolving, and verifying enforceable commitments.
         </p>
 
         <div class="code-window fade-up" id="code-block">
@@ -1904,10 +1929,10 @@
 
     /* --- Typing Effect --- */
     const phrases = [
-      "Deterministic, zero-human enforcement.",
-      "Evaluating objective SLA parameters...",
-      "Trustless collateral slashing engaged.",
-      "The Agentic Economy is now accountable."
+      "The machine court for agent economies.",
+      "Evaluating narrow, verifiable chain state...",
+      "Collateral-backed enforcement engaged.",
+      "Agent commitments, made economically real."
     ];
 
     let i = 0, j = 0, currentPhrase = [];
